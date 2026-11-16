@@ -1,7 +1,6 @@
 from math import factorial, comb
 from fractions import Fraction
 
-# 1. Перестановки
 books = 6
 permutations = factorial(books)
 
@@ -9,7 +8,6 @@ print("1. Перестановки")
 print("Количество способов расставить 6 книг:")
 print(permutations)
 
-# 2. Размещения
 students = 10
 positions = 3
 
@@ -19,7 +17,6 @@ print("\n2. Размещения")
 print("Количество способов выбрать 3 человека из 10 с учётом порядка:")
 print(placements)
 
-# 3. Сочетания
 items = 9
 chosen = 4
 
@@ -29,7 +26,6 @@ print("\n3. Сочетания")
 print("Количество способов выбрать 4 предмета из 9 без учёта порядка:")
 print(combinations)
 
-# 4. Вероятность при бросании кубика
 favorable_outcomes = 2  # числа 5 и 6
 total_outcomes = 6
 
@@ -39,7 +35,6 @@ print("\n4. Вероятность выпадения числа больше 4"
 print("P(число больше 4) =", probability_cube)
 print("В десятичной записи:", float(probability_cube))
 
-# 5. Вероятность достать красный шар
 red_balls = 7
 blue_balls = 5
 total_balls = red_balls + blue_balls
@@ -50,7 +45,6 @@ print("\n5. Вероятность достать красный шар")
 print("P(красный шар) =", probability_red)
 print("В десятичной записи:", float(probability_red))
 
-# 6. Вероятность достать 2 белых шара без возвращения
 white_balls = 8
 black_balls = 4
 total_balls_2 = white_balls + black_balls
@@ -64,7 +58,6 @@ print("\n6. Вероятность достать 2 белых шара")
 print("P(2 белых шара) =", probability_two_white)
 print("В десятичной записи:", float(probability_two_white))
 
-# 7. Вероятность с картами
 total_cards = 36
 aces = 4
 red_cards = 18
