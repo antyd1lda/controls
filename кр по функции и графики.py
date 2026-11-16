@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 
-# Определение функций
+#функций
 def f(x):
     return 2 * x + 1
 
@@ -18,7 +18,7 @@ def main():
     print("КОНТРОЛЬНАЯ РАБОТА: ФУНКЦИИ И ГРАФИКИ")
     print("=" * 50)
 
-    # 1. Таблица значений
+    #1 значения
     print("\n1. Таблица значений")
     print(f"{'x':>5} | {'2x + 1':>10} | {'x² - 4':>10} | {'|x| - 2':>10}")
     print("-" * 47)
@@ -26,8 +26,7 @@ def main():
     for x in range(-3, 4):
         print(f"{x:>5} | {f(x):>10} | {g(x):>10} | {h(x):>10}")
 
-    # 2. Аналитические ответы для заданных функций.
-    # Эти ответы записаны заранее, а не найдены программой.
+    # 2 заранее написанные ответы
     print("\n2. Свойства функций")
 
     print("\nf(x) = 2x + 1")
@@ -54,7 +53,7 @@ def main():
     print("Убывает на (-∞; 0], возрастает на [0; +∞).")
     print("Наименьшее значение: -2 при x = 0.")
 
-    # 3. Подготовка точек от -5 до 5 с шагом 0.01
+    # 3. подготовление точек
     x_values = [i / 100 for i in range(-500, 501)]
 
     functions = [
@@ -63,7 +62,7 @@ def main():
         ("h(x) = |x| - 2", h, [-2, 2], "darkorange"),
     ]
 
-    # 4. Построение трёх отдельных графиков
+    # 4. стрение графиков
     fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
     for ax, (title, function, roots, color) in zip(axes, functions):
@@ -73,7 +72,6 @@ def main():
         ax.axhline(0, color="black", linewidth=0.8)
         ax.axvline(0, color="black", linewidth=0.8)
 
-        # Отметим нули функции и пересечение с осью Oy
         ax.scatter(
             roots, [0] * len(roots),
             color="red", zorder=5, label="Нули функции"
@@ -92,7 +90,6 @@ def main():
     fig.suptitle("Контрольная работа: функции и графики")
     fig.tight_layout()
 
-    # Сохранение рисунка в папку, из которой запущена программа
     fig.savefig("grafiki_funktsiy.png", dpi=150)
     print("\nГрафики сохранены в файл grafiki_funktsiy.png.")
 
