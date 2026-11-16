@@ -2,7 +2,7 @@ from sympy import symbols, limit, diff, sin, exp, log, oo
 
 x = symbols("x")
 
-# 1. Пределы
+# 1 пределы
 
 limit_1 = limit((x**2 - 9) / (x - 3), x, 3)
 limit_2 = limit(sin(5*x) / x, x, 0)
@@ -13,7 +13,7 @@ print("lim (x^2 - 9) / (x - 3), x -> 3 =", limit_1)
 print("lim sin(5x) / x, x -> 0 =", limit_2)
 print("lim (3x^2 + 2x - 1) / (6x^2 - x + 4), x -> infinity =", limit_3)
 
-# 2. Производные
+# 2 производные
 
 f = 4*x**3 - 5*x**2 + 2*x - 7
 g = sin(x)
@@ -37,7 +37,7 @@ print("k'(x) =", diff(k, x))
 print("\nm(x) =", m)
 print("m'(x) =", diff(m, x))
 
-# 3. Значение производной в точке
+# 3 значение производной
 
 function = x**2 + 3*x
 derivative = diff(function, x)
